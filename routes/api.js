@@ -120,12 +120,12 @@ module.exports = function (app) {
             res.json({
               stockData: [
                 {
-                  symbol: firstStock.symbol,
+                  stock: firstStock.symbol,
                   price: firstStock.latestPrice,
                   rel_likes: firstStockLikes - secondStockLikes
                 },
                 {
-                  symbol: secondStock.symbol,
+                  stock: secondStock.symbol,
                   price: secondStock.latestPrice,
                   rel_likes: secondStockLikes - firstStockLikes
                 }
@@ -160,7 +160,7 @@ module.exports = function (app) {
             if (stockDataEntry) {
               res.json({
                 stockData: {
-                  symbol: symbol,
+                  stock: symbol,
                   price: latestPrice,
                   likes: stockDataEntry.ips.length
                 }
