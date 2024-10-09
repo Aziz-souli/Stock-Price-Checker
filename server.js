@@ -14,12 +14,12 @@ const helmet            = require ('helmet')
 
 const app = express();
 ///// adding security the server 
-//app.use(helmet.hidePoweredBy())
-//app.use(helmet.frameguard({action: 'deny'}))
-//app.use(helmet.xssFilter())
-//app.use(helmet.noSniff())
-//app.use(helmet.ieNoOpen())
-//app.use(helmet.dnsPrefetchControl())
+app.use(helmet.hidePoweredBy())
+app.use(helmet.frameguard({action: 'deny'}))
+app.use(helmet.xssFilter())
+app.use(helmet.noSniff())
+app.use(helmet.ieNoOpen())
+app.use(helmet.dnsPrefetchControl())
 app.use(helmet.contentSecurityPolicy({
   directives: {
     defaultSrc: ["'self'"],
